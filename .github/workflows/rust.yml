@@ -29,4 +29,4 @@ jobs:
           toolchain: stable
           override: true
       - name: tests
-        run: make tests
+        run: make tests-windows

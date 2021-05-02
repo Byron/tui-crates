@@ -7,19 +7,23 @@ help:  ## Display this help
 
 check: ## build features in commmon combination to be sure it all stays together
 	#if cargo check; then false; fi
-	cargo check --features crossterm
+	$(MAKE) check-windows
 	cargo check --features termion
-	cargo check --features crossterm,input-async
 	cargo check --features termion,input-async
-	cargo check --features crossterm,tui
 	cargo check --features termion,tui
 	cargo check --features tui-react-termion
 	cargo check --features tui-react-termion,input-async
-	cargo check --features tui-react-crossterm
-	cargo check --features tui-react-crossterm,input-async
 	cargo check --features tui-termion
-	cargo check --features tui-crossterm
 	cargo check --features color
 	cargo check --all-features
 
+
+check-windows: ## build features in commmon combination to be sure it all stays together, crossterm only
+	cargo check --features crossterm
+	cargo check --features crossterm,input-async
+	cargo check --features crossterm,tui
+	cargo check --features tui-react-crossterm
+	cargo check --features tui-react-crossterm,input-async
+	cargo check --features tui-crossterm
+	cargo check --features color
 

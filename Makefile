@@ -9,6 +9,10 @@ tests: ## Run all tests we have to assert quality
 	cd crosstermion && make check
 	cd tui-react && cargo check
 
+tests-windows: ## Run all tests that have a chance to work on windows
+	cd crosstermion && make check-windows
+	cd tui-react && cargo check
+
 ##@ Maintenance
 clean: ## cargo clean on all crates
 	cargo clean
