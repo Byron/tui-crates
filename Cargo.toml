@@ -1,0 +1,2 @@
+[workspace]
+members = ["crosstermion", "tui-react"]

@@ -24,7 +24,10 @@ mod _impl {
         }
 
         #[must_use]
-        pub fn paint<'a, I, S: 'a + ToOwned + ?Sized>(&mut self, input: I) -> ANSIGenericString<'a, S>
+        pub fn paint<'a, I, S: 'a + ToOwned + ?Sized>(
+            &mut self,
+            input: I,
+        ) -> ANSIGenericString<'a, S>
         where
             I: Into<std::borrow::Cow<'a, S>>,
             <S as ToOwned>::Owned: std::fmt::Debug,

@@ -49,7 +49,9 @@ mod _impl {
     pub mod tui {
         use tui::backend::CrosstermBackend;
 
-        pub fn new_terminal<W: std::io::Write>(write: W) -> Result<tui::Terminal<CrosstermBackend<W>>, std::io::Error> {
+        pub fn new_terminal<W: std::io::Write>(
+            write: W,
+        ) -> Result<tui::Terminal<CrosstermBackend<W>>, std::io::Error> {
             let backend = CrosstermBackend::new(write);
             Ok(tui::Terminal::new(backend)?)
         }
@@ -101,7 +103,9 @@ mod _impl {
     pub mod tui {
         use tui::backend::TermionBackend;
 
-        pub fn new_terminal<W: std::io::Write>(write: W) -> Result<tui::Terminal<TermionBackend<W>>, std::io::Error> {
+        pub fn new_terminal<W: std::io::Write>(
+            write: W,
+        ) -> Result<tui::Terminal<TermionBackend<W>>, std::io::Error> {
             let backend = TermionBackend::new(write);
             Ok(tui::Terminal::new(backend)?)
         }

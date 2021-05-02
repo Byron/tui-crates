@@ -11,6 +11,5 @@ tests: ## Run all tests we have to assert quality
 
 ##@ Maintenance
 clean: ## cargo clean on all crates
-	cd crosstermion && cargo clean
-	cd tui-react && cargo clean
+	cargo clean
 
