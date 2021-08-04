@@ -119,7 +119,7 @@ mod _impl {
         std::thread::spawn(move || -> Result<(), std::io::Error> {
             loop {
                 let event = match continue_on_interrupt(
-                    crossterm::event::read().map_err(crate::crossterm_utils::into_io_error),
+                    crossterm::event::read(),
                 ) {
                     Action::Continue => continue,
                     Action::Result(res) => res?,

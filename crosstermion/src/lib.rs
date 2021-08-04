@@ -11,8 +11,6 @@ pub mod cursor;
 
 pub mod color;
 
-#[cfg(feature = "crossterm")]
-pub mod crossterm_utils;
 
 // Reexports
 #[cfg(feature = "ansi_term")]

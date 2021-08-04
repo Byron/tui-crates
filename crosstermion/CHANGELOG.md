@@ -1,3 +1,7 @@
+#### v0.8.0
+
+* upgrade to TUI 0.16 and crossterm 0.20
+
 #### v0.7.0
 
 * upgrade to TUI 0.15
