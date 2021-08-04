@@ -11,7 +11,6 @@ pub mod cursor;
 
 pub mod color;
 
-
 // Reexports
 #[cfg(feature = "ansi_term")]
 pub use ansi_term;

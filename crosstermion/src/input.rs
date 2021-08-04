@@ -118,9 +118,7 @@ mod _impl {
         let (key_send, key_receive) = std::sync::mpsc::sync_channel(0);
         std::thread::spawn(move || -> Result<(), std::io::Error> {
             loop {
-                let event = match continue_on_interrupt(
-                    crossterm::event::read(),
-                ) {
+                let event = match continue_on_interrupt(crossterm::event::read()) {
                     Action::Continue => continue,
                     Action::Result(res) => res?,
                 };
