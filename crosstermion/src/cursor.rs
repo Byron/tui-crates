@@ -11,7 +11,7 @@ pub use _impl::*;
 macro_rules! execute {
     ($writer:expr $(, $command:expr)* $(,)? ) => {
         $crate::crossterm::queue!($writer $(, $command)*).and_then(|()| {
-            $writer.flush().map_err($crate::crossterm::ErrorKind::IoError)
+            $writer.flush()
         })
     }
 }
