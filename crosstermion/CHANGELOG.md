@@ -5,15 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## Unreleased
+## 0.9.0 (2022-01-23)
+
+### New Features (BREAKING)
+
+ - <csr-id-a3223b3d39cb71adb1b866653ee0c984924b90ca/> upgrade to tui 0.17
 
 ### Commit Statistics
 
 <csr-read-only-do-not-edit/>
 
- - 2 commits contributed to the release.
+ - 3 commits contributed to the release.
  - 170 days passed between releases.
- - 0 commits where understood as [conventional](https://www.conventionalcommits.org).
+ - 1 commit where understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' where seen in commit messages
 
 ### Commit Details
@@ -23,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - upgrade to tui 0.17 ([`a3223b3`](https://github.com/Byron/tui-crates/commit/a3223b3d39cb71adb1b866653ee0c984924b90ca))
     - Release tui-react v0.17.0 ([`4523678`](https://github.com/Byron/tui-crates/commit/4523678efbc9c876e46325682861c27ee5e7fb02))
     - Use local tui-react crate ([`9281c8e`](https://github.com/Byron/tui-crates/commit/9281c8e65226ff3a34ade7b95ef96374c9a759ea))
 </details>
