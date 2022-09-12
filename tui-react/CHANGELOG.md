@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## Unreleased
+## 0.19.0 (2022-09-12)
 
 Upgrade to tui 0.19.
 
@@ -13,7 +13,7 @@ Upgrade to tui 0.19.
 
 <csr-read-only-do-not-edit/>
 
- - 1 commit contributed to the release.
+ - 2 commits contributed to the release.
  - 231 days passed between releases.
  - 0 commits were understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' where seen in commit messages
@@ -25,6 +25,7 @@ Upgrade to tui 0.19.
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - prepare changelog prior to release ([`2539f6e`](https://github.com/Byron/tui-crates/commit/2539f6e1a28d038523e342810b94770e57021cd2))
     - upgrade to tui 19 ([`1b2afad`](https://github.com/Byron/tui-crates/commit/1b2afadba7064febd0d2dffc68f82419f9a4510b))
 </details>
 
