@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## Unreleased
+## 0.10.0 (2022-09-12)
 
 Upgrade to `tui` 0.19 and `crossterm` 0.25.
 
@@ -13,7 +13,7 @@ Upgrade to `tui` 0.19 and `crossterm` 0.25.
 
 <csr-read-only-do-not-edit/>
 
- - 2 commits contributed to the release.
+ - 3 commits contributed to the release.
  - 231 days passed between releases.
  - 0 commits were understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' where seen in commit messages
@@ -25,6 +25,7 @@ Upgrade to `tui` 0.19 and `crossterm` 0.25.
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - update changelog prior to release ([`7e1330d`](https://github.com/Byron/tui-crates/commit/7e1330dfc070cd8c383d8b273622709e67a0c985))
     - Upgrade to crossterm 25 and tui 19 ([`ec53e20`](https://github.com/Byron/tui-crates/commit/ec53e202e7fb1809b94de0b26a010f61704c6a74))
     - Allow for the Resize event to happen ([`e49a08a`](https://github.com/Byron/tui-crates/commit/e49a08a9143e9d4684ffdf387face6cdb7b24367))
 </details>
