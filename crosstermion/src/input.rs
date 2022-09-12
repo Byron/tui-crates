@@ -71,7 +71,7 @@ mod convert {
                     KeyModifiers::ALT => Key::Alt(c),
                     _ => return Err(value),
                 },
-                _ => return Err(value)
+                _ => return Err(value),
             })
         }
     }
