@@ -19,8 +19,6 @@ pub enum Key {
     Ctrl(char),
     Null,
     Esc,
-    /// A resize event to indicate a redraw is needed in these x/y dimensions
-    Resize(u16, u16)
 }
 
 #[cfg(any(feature = "crossterm", feature = "termion"))]
@@ -73,6 +71,7 @@ mod convert {
                     KeyModifiers::ALT => Key::Alt(c),
                     _ => return Err(value),
                 },
+                _ => return Err(value)
             })
         }
     }
