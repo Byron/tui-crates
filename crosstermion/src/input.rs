@@ -1,3 +1,11 @@
+/// An event that may be received by the application.
+pub enum Event {
+    /// A key was pressed
+    Key(Key),
+    /// The window was resized
+    Resize(u16, u16),
+}
+
 /// A set of possible key presses, equivalent to the one in `termion@1.5.5::event::Key`
 #[derive(Debug, Clone, Copy)]
 pub enum Key {
@@ -76,6 +84,22 @@ mod convert {
         }
     }
 
+    #[cfg(feature = "crossterm")]
+    /// Convert from `crossterm::event::Event`
+    impl std::convert::TryFrom<crossterm::event::Event> for super::Event {
+        type Error = crossterm::event::Event;
+
+        fn try_from(event: crossterm::event::Event) -> Result<Self, Self::Error> {
+            use crossterm::event::Event::*;
+            use std::convert::TryInto;
+            Ok(match event {
+                Key(key) => key.try_into().map(super::Event::Key).map_err(|_| event)?,
+                Resize(x, y) => super::Event::Resize(x, y),
+                _ => return Err(event),
+            })
+        }
+    }
+
     #[cfg(feature = "termion")]
     /// Convert from `termion::event::Key`
     impl std::convert::TryFrom<termion::event::Key> for Key {
@@ -108,11 +132,26 @@ mod convert {
     }
 }
 
+#[cfg(feature = "termion")]
+/// Convert from `termion::event::Key`
+impl std::convert::TryFrom<termion::event::Event> for Event {
+    type Error = termion::event::Event;
+
+    fn try_from(event: termion::event::Event) -> Result<Self, Self::Error> {
+        use std::convert::TryInto;
+        use termion::event::Event::*;
+        Ok(match event {
+            Key(key) => key.try_into().map(Event::Key).map_err(|_| event)?,
+            _ => return Err(event),
+        })
+    }
+}
+
 #[cfg(feature = "crossterm")]
 mod _impl {
     use crate::input::{continue_on_interrupt, Action};
 
-    /// Return a receiver of user input events to avoid blocking the main thread.
+    /// Return a receiver of user key input events to avoid blocking the main thread.
     pub fn key_input_channel() -> std::sync::mpsc::Receiver<super::Key> {
         use std::convert::TryInto;
 
@@ -134,6 +173,28 @@ mod _impl {
                     }
                     _ => continue,
                 };
+            }
+            Ok(())
+        });
+        key_receive
+    }
+
+    /// Return a receiver of user input events to avoid blocking the main thread.
+    pub fn input_channel() -> std::sync::mpsc::Receiver<super::Event> {
+        use std::convert::TryInto;
+
+        let (key_send, key_receive) = std::sync::mpsc::sync_channel(0);
+        std::thread::spawn(move || -> Result<(), std::io::Error> {
+            loop {
+                let event = match continue_on_interrupt(crossterm::event::read()) {
+                    Action::Continue => continue,
+                    Action::Result(res) => res?,
+                };
+                if let Ok(event) = event.try_into() {
+                    if key_send.send(event).is_err() {
+                        break;
+                    }
+                }
             }
             Ok(())
         });
@@ -200,6 +261,28 @@ mod _impl {
                 };
                 if let Ok(key) = key {
                     if key_send.send(key).is_err() {
+                        break;
+                    }
+                }
+            }
+            Ok(())
+        });
+        key_receive
+    }
+
+    pub fn input_channel() -> std::sync::mpsc::Receiver<super::Event> {
+        use std::{convert::TryInto, io};
+        use termion::input::TermRead;
+
+        let (key_send, key_receive) = std::sync::mpsc::sync_channel(0);
+        std::thread::spawn(move || -> Result<(), io::Error> {
+            for key in io::stdin().keys() {
+                let key: Result<super::Key, _> = match continue_on_interrupt(key) {
+                    Action::Continue => continue,
+                    Action::Result(res) => res?.try_into(),
+                };
+                if let Ok(key) = key {
+                    if key_send.send(super::Event::Key(key)).is_err() {
                         break;
                     }
                 }
