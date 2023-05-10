@@ -4,7 +4,7 @@ Please note that this crate is early in development and build for the needs of *
 
 ### How it works
 
-It uses the TUI infrastructure Terminal, but alters it to not enforce implementing the `Widget` trait. 
+It uses the Ratatui infrastructure Terminal, but alters it to not enforce implementing the `Widget` trait.
 It provides only a single, optional, trait called `TopLevelComponent`, which makes it convenient to
 draw its implementors with `Terminal::render(..)`. However, since this enforces the absence of
 refernces in your state, it's probably not suitable for most.
@@ -17,11 +17,10 @@ greatly adding to flexibility.
 State that one wants within the component for instance could be the scoll location. Alternatively,
 one can configure windows by altering their public state.
 
-### What's the relation to TUI?
+### What's the relation to TUI / Ratatui?
 
-This project coudln't exist without it, and is happy to provide an alternative set of components
-for use in command-line applications.
-
+This project coudln't exist without TUI, and is happy to provide an alternative set of components
+for use in command-line applications. Ratatui is the continuation of the tui project.
 
 ### Why `tui-react`?
 

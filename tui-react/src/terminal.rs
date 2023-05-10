@@ -2,7 +2,7 @@
 use log::error;
 use std::{borrow::Borrow, io};
 
-use tui::{backend::Backend, buffer::Buffer, layout::Rect};
+use ratatui::{backend::Backend, buffer::Buffer, layout::Rect};
 
 /// A component meant to be rendered by `Terminal::render(...)`.
 /// All other components don't have to implement this trait, and instead
@@ -136,7 +136,7 @@ where
 #[cfg(test)]
 mod tests {
     use super::*;
-    use tui::backend::TestBackend;
+    use ratatui::backend::TestBackend;
 
     #[derive(Default, Clone)]
     struct ComplexProps {

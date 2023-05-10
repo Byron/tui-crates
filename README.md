@@ -4,12 +4,11 @@ Various crates related to handling terminal user interfaces.
 
 # Maintenance Notes
 
-## Upgrading TUI
+## Upgrading Ratatui
 
-1. upgrade `tui` in `tui-react`, increment mionr in `tui-react`  and `cargo publish`.
-1. uprgade `tui` and `tui-react` in `crosstermion` and `cargo release`.
-
+1. upgrade `ratatui` in `tui-react`, increment mionr in `tui-react`  and `cargo publish`.
+1. upgrade `ratatui` and `tui-react` in `crosstermion` and `cargo release`.
 
 ## Upgrading Crossterm
 
-You can't - it comes as tui backend and thus we need tui to upgrade to the latest crossterm first.
+You can't - it comes as ratatui backend and thus we need ratatui to upgrade to the latest crossterm first.

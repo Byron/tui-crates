@@ -46,7 +46,7 @@ mod _impl {
 
     #[cfg(all(feature = "tui-crossterm-backend", not(feature = "tui-react")))]
     pub mod tui {
-        use tui::backend::CrosstermBackend;
+        use ratatui::backend::CrosstermBackend;
 
         pub fn new_terminal<W: std::io::Write>(
             write: W,
@@ -58,7 +58,7 @@ mod _impl {
 
     #[cfg(all(feature = "tui-crossterm-backend", feature = "tui-react"))]
     pub mod tui {
-        use tui::backend::CrosstermBackend;
+        use ratatui::backend::CrosstermBackend;
 
         pub fn new_terminal<W: std::io::Write>(
             write: W,
@@ -72,8 +72,8 @@ mod _impl {
 #[cfg(feature = "termion")]
 mod _impl {
     use std::io;
+    use termion::screen::IntoAlternateScreen;
     pub use termion::terminal_size as size;
-
     pub struct AlternateRawScreen<T: io::Write> {
         inner: termion::screen::AlternateScreen<T>,
     }
@@ -83,7 +83,7 @@ mod _impl {
             use termion::raw::IntoRawMode;
             let write = write.into_raw_mode()?;
             Ok(AlternateRawScreen {
-                inner: termion::screen::AlternateScreen::from(write),
+                inner: write.into_alternate_screen()?,
             })
         }
     }
@@ -100,7 +100,7 @@ mod _impl {
 
     #[cfg(all(feature = "tui-termion-backend", not(feature = "tui-react")))]
     pub mod tui {
-        use tui::backend::TermionBackend;
+        use ratatui::backend::TermionBackend;
 
         pub fn new_terminal<W: std::io::Write>(
             write: W,
@@ -115,7 +115,7 @@ mod _impl {
     /// Requires the `tui-react` and `tui-crossterm-backend` features set.
     #[cfg(all(feature = "tui-termion-backend", feature = "tui-react"))]
     pub mod tui {
-        use tui::backend::TermionBackend;
+        use ratatui::backend::TermionBackend;
 
         /// Returns a new Terminal instance with a suitable backend.
         pub fn new_terminal<W: std::io::Write>(

@@ -6,8 +6,8 @@ mod terminal;
 pub use list::*;
 pub use terminal::*;
 
+use ratatui::{self, buffer::Buffer, layout::Rect, style::Color, style::Style};
 use std::iter::repeat;
-use tui::{self, buffer::Buffer, layout::Rect, style::Color, style::Style};
 use unicode_segmentation::UnicodeSegmentation;
 use unicode_width::UnicodeWidthStr;
 
@@ -117,7 +117,7 @@ pub mod util {
     }
 
     pub mod rect {
-        use tui::layout::Rect;
+        use ratatui::layout::Rect;
 
         /// A safe version of Rect::intersection that doesn't suffer from underflows
         pub fn intersect(lhs: Rect, rhs: Rect) -> Rect {

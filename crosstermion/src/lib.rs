@@ -16,9 +16,9 @@ pub mod color;
 pub use ansi_term;
 #[cfg(feature = "crossterm")]
 pub use crossterm;
+#[cfg(feature = "ratatui")]
+pub use ratatui;
 #[cfg(feature = "termion")]
 pub use termion;
-#[cfg(feature = "tui")]
-pub use tui;
 #[cfg(feature = "tui-react")]
 pub use tui_react;
