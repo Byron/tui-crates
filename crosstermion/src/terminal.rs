@@ -81,9 +81,10 @@ mod _impl {
     impl<T: io::Write> AlternateRawScreen<termion::raw::RawTerminal<T>> {
         pub fn try_from(write: T) -> Result<Self, io::Error> {
             use termion::raw::IntoRawMode;
+            use termion::screen::IntoAlternateScreen;
             let write = write.into_raw_mode()?;
             Ok(AlternateRawScreen {
-                inner: termion::screen::AlternateScreen::from(write),
+                inner: write.into_alternate_screen()?,
             })
         }
     }
