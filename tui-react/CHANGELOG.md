@@ -5,18 +5,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## 0.19.0 (2022-09-12)
+## 0.20.0 (2023-05-11)
 
-Upgrade to tui 0.19.
+### Chore (BREAKING)
+
+ - <csr-id-073005de8c9177248528a4cc9be58d6cee525394/> switch to 'ratatui' in a fashion that leaves imports alone.
+   However would still be a breaking change for anyone leaving `tui` in
+   their dependency tree.
 
 ### Commit Statistics
 
 <csr-read-only-do-not-edit/>
 
- - 2 commits contributed to the release.
- - 231 days passed between releases.
- - 0 commits were understood as [conventional](https://www.conventionalcommits.org).
- - 0 issues like '(#ID)' where seen in commit messages
+ - 3 commits contributed to the release.
+ - 241 days passed between releases.
+ - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
+ - 0 issues like '(#ID)' were seen in commit messages
 
 ### Commit Details
 
@@ -25,8 +29,34 @@ Upgrade to tui 0.19.
 <details><summary>view details</summary>
 
  * **Uncategorized**
-    - prepare changelog prior to release ([`2539f6e`](https://github.com/Byron/tui-crates/commit/2539f6e1a28d038523e342810b94770e57021cd2))
-    - upgrade to tui 19 ([`1b2afad`](https://github.com/Byron/tui-crates/commit/1b2afadba7064febd0d2dffc68f82419f9a4510b))
+    - Merge branch 'ratatui-2' ([`948b539`](https://github.com/Byron/tui-crates/commit/948b5397c0b8317e857f79515165c04314b6838a))
+    - Further updates to `crossterm` and `termion` ([`3157b3b`](https://github.com/Byron/tui-crates/commit/3157b3bf392b18f0f6be7e2c04d0b8782d76314e))
+    - Switch to 'ratatui' in a fashion that leaves imports alone. ([`073005d`](https://github.com/Byron/tui-crates/commit/073005de8c9177248528a4cc9be58d6cee525394))
+</details>
+
+## 0.19.0 (2022-09-12)
+
+Upgrade to tui 0.19.
+
+### Commit Statistics
+
+<csr-read-only-do-not-edit/>
+
+ - 3 commits contributed to the release.
+ - 231 days passed between releases.
+ - 0 commits were understood as [conventional](https://www.conventionalcommits.org).
+ - 0 issues like '(#ID)' were seen in commit messages
+
+### Commit Details
+
+<csr-read-only-do-not-edit/>
+
+<details><summary>view details</summary>
+
+ * **Uncategorized**
+    - Release tui-react v0.19.0 ([`6296315`](https://github.com/Byron/tui-crates/commit/629631545c7137c4071df1d895dee6e547e4d149))
+    - Prepare changelog prior to release ([`2539f6e`](https://github.com/Byron/tui-crates/commit/2539f6e1a28d038523e342810b94770e57021cd2))
+    - Upgrade to tui 19 ([`1b2afad`](https://github.com/Byron/tui-crates/commit/1b2afadba7064febd0d2dffc68f82419f9a4510b))
 </details>
 
 ## 0.17.0 (2022-01-23)
@@ -42,7 +72,7 @@ Upgrade to tui 0.19.
  - 3 commits contributed to the release.
  - 171 days passed between releases.
  - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
- - 0 issues like '(#ID)' where seen in commit messages
+ - 0 issues like '(#ID)' were seen in commit messages
 
 ### Commit Details
 
@@ -52,8 +82,8 @@ Upgrade to tui 0.19.
 
  * **Uncategorized**
     - Release tui-react v0.17.0 ([`4523678`](https://github.com/Byron/tui-crates/commit/4523678efbc9c876e46325682861c27ee5e7fb02))
-    - add changelog ([`221474b`](https://github.com/Byron/tui-crates/commit/221474b379a2c3c2f0c45dff5471659413bb9548))
-    - upgrade to tui 0.17 ([`b5dd733`](https://github.com/Byron/tui-crates/commit/b5dd73380c316d1722cc70ec4220d6ea9a7bf141))
+    - Add changelog ([`221474b`](https://github.com/Byron/tui-crates/commit/221474b379a2c3c2f0c45dff5471659413bb9548))
+    - Upgrade to tui 0.17 ([`b5dd733`](https://github.com/Byron/tui-crates/commit/b5dd73380c316d1722cc70ec4220d6ea9a7bf141))
 </details>
 
 ## v0.16.0 (2021-08-04)
@@ -64,7 +94,7 @@ Upgrade to tui 0.19.
 
  - 3 commits contributed to the release over the course of 93 calendar days.
  - 0 commits were understood as [conventional](https://www.conventionalcommits.org).
- - 0 issues like '(#ID)' where seen in commit messages
+ - 0 issues like '(#ID)' were seen in commit messages
 
 ### Commit Details
 
@@ -73,8 +103,8 @@ Upgrade to tui 0.19.
 <details><summary>view details</summary>
 
  * **Uncategorized**
-    - upgrade to tui 0.16 ([`907a5e5`](https://github.com/Byron/tui-crates/commit/907a5e591688732c3f88821daebc7ff8c010730b))
-    - changes repository paths in tui crates manifests ([`ac5c6e6`](https://github.com/Byron/tui-crates/commit/ac5c6e62c86189a72e2305d06da176821f88b180))
+    - Upgrade to tui 0.16 ([`907a5e5`](https://github.com/Byron/tui-crates/commit/907a5e591688732c3f88821daebc7ff8c010730b))
+    - Changes repository paths in tui crates manifests ([`ac5c6e6`](https://github.com/Byron/tui-crates/commit/ac5c6e62c86189a72e2305d06da176821f88b180))
     - Add tui crates ([`ccb6a24`](https://github.com/Byron/tui-crates/commit/ccb6a24315a7d881e50b24e98d4720406bff16d5))
 </details>
 
