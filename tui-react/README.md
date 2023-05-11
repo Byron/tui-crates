@@ -17,11 +17,10 @@ greatly adding to flexibility.
 State that one wants within the component for instance could be the scoll location. Alternatively,
 one can configure windows by altering their public state.
 
-### What's the relation to TUI?
+### What's the relation to TUI / Ratatui?
 
-This project coudln't exist without it, and is happy to provide an alternative set of components
-for use in command-line applications.
-
+This project couldn't exist without TUI, and is happy to provide an alternative set of components
+for use in command-line applications. Ratatui is the continuation of the tui project.
 
 ### Why `tui-react`?
 

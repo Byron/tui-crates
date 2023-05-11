@@ -6,7 +6,7 @@ Various crates related to handling terminal user interfaces.
 
 ## Upgrading TUI
 
-1. upgrade `tui` in `tui-react`, increment mionr in `tui-react`  and `cargo publish`.
+1. upgrade `tui` in `tui-react`, increment minor in `tui-react`  and `cargo publish`.
 1. uprgade `tui` and `tui-react` in `crosstermion` and `cargo release`.
 
 
