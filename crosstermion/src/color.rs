@@ -1,9 +1,9 @@
 use std::borrow::Cow;
 use std::ffi::OsStr;
 
-#[cfg(feature = "ansi_term")]
+#[cfg(feature = "ansiterm")]
 mod _impl {
-    use ansi_term::{ANSIGenericString, Style};
+    use ansiterm::{ANSIGenericString, Style};
 
     pub struct Brush {
         may_paint: bool,
@@ -40,7 +40,7 @@ mod _impl {
     }
 }
 
-#[cfg(feature = "ansi_term")]
+#[cfg(feature = "ansiterm")]
 pub use _impl::*;
 
 /// Return true if we should colorize the output, based on [clicolors spec](https://bixense.com/clicolors/) and [no-color spec](https://no-color.org)

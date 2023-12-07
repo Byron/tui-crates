@@ -12,8 +12,8 @@ pub mod cursor;
 pub mod color;
 
 // Reexports
-#[cfg(feature = "ansi_term")]
-pub use ansi_term;
+#[cfg(feature = "ansiterm")]
+pub use ansiterm as ansi_term;
 #[cfg(feature = "crossterm")]
 pub use crossterm;
 #[cfg(feature = "termion")]
