@@ -5,7 +5,41 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.12.0 (2023-12-07)
+
+### Chore
+
+ - <csr-id-d337c866f48dda83166d8cafaaa97bbf24d69216/> upgrade all packages as long as they don't break the API
+
+### Chore (BREAKING)
+
+ - <csr-id-a371272a96da49e8db82221eaf23d3aab38514d0/> upgrade `ratatui` to 0.24 and `crossterm` to v0.27.
+   Note that these two work together, and depend on each other.
+
+### Commit Statistics
+
+<csr-read-only-do-not-edit/>
+
+ - 3 commits contributed to the release.
+ - 210 days passed between releases.
+ - 2 commits were understood as [conventional](https://www.conventionalcommits.org).
+ - 0 issues like '(#ID)' were seen in commit messages
+
+### Commit Details
+
+<csr-read-only-do-not-edit/>
+
+<details><summary>view details</summary>
+
+ * **Uncategorized**
+    - Merge branch 'upgrades' ([`c6265c8`](https://github.com/Byron/tui-crates/commit/c6265c8773829f54e4acb1106d56ef2239edcab7))
+    - Upgrade `ratatui` to 0.24 and `crossterm` to v0.27. ([`a371272`](https://github.com/Byron/tui-crates/commit/a371272a96da49e8db82221eaf23d3aab38514d0))
+    - Upgrade all packages as long as they don't break the API ([`d337c86`](https://github.com/Byron/tui-crates/commit/d337c866f48dda83166d8cafaaa97bbf24d69216))
+</details>
+
 ## 0.11.0 (2023-05-11)
+
+<csr-id-073005de8c9177248528a4cc9be58d6cee525394/>
 
 ### Chore (BREAKING)
 
@@ -17,7 +51,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <csr-read-only-do-not-edit/>
 
- - 3 commits contributed to the release.
+ - 4 commits contributed to the release.
  - 241 days passed between releases.
  - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
@@ -29,6 +63,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - Release tui-react v0.20.0, crosstermion v0.11.0, safety bump crosstermion v0.11.0 ([`6cc6346`](https://github.com/Byron/tui-crates/commit/6cc634618e1549fcece860b7b43f5d7ee5d1d259))
     - Merge branch 'ratatui-2' ([`948b539`](https://github.com/Byron/tui-crates/commit/948b5397c0b8317e857f79515165c04314b6838a))
     - Further updates to `crossterm` and `termion` ([`3157b3b`](https://github.com/Byron/tui-crates/commit/3157b3bf392b18f0f6be7e2c04d0b8782d76314e))
     - Switch to 'ratatui' in a fashion that leaves imports alone. ([`073005d`](https://github.com/Byron/tui-crates/commit/073005de8c9177248528a4cc9be58d6cee525394))
