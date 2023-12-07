@@ -1,7 +1,7 @@
 use tui::{
     buffer::Buffer,
     layout::Rect,
-    text::{Span, Spans, Text},
+    text::{Line, Span, Text},
     widgets::{Block, Paragraph, Widget},
 };
 
@@ -64,7 +64,7 @@ impl List {
             .take(list_area.height as usize)
         {
             let (x, y) = (list_area.left(), list_area.top() + i as u16);
-            Paragraph::new(Text::from(Spans::from(vec_of_spans))).render(
+            Paragraph::new(Text::from(Line::from(vec_of_spans))).render(
                 Rect {
                     x,
                     y,
