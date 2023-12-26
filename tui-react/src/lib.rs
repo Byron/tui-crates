@@ -52,7 +52,7 @@ pub fn draw_text_with_ellipsis_nowrap(
             if x + 1 == bound.right() {
                 ellipsis_candidate_x = Some(x);
             }
-            cell.symbol = g.into();
+            cell.set_symbol(g.into());
             if let Some(s) = s {
                 cell.set_style(s);
             }
@@ -68,7 +68,7 @@ pub fn draw_text_with_ellipsis_nowrap(
             }
         }
         if let (Some(_), Some(x)) = (graphemes.next(), ellipsis_candidate_x) {
-            buf.get_mut(x, bound.y).symbol = "…".into();
+            buf.get_mut(x, bound.y).set_symbol("…".into());
         }
     }
     total_width as u16
@@ -85,8 +85,8 @@ pub fn draw_text_nowrap_fn(
     }
     for (g, x) in t.as_ref().graphemes(true).zip(bound.left()..bound.right()) {
         let cell = buf.get_mut(x, bound.y);
-        cell.symbol = g.into();
-        cell.set_style(s(&cell.symbol, x, bound.y));
+        cell.set_symbol(g.into());
+        cell.set_style(s(cell.symbol(), x, bound.y));
     }
 }
 
