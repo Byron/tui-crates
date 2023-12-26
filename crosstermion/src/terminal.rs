@@ -1,4 +1,4 @@
-#[cfg(all(feature = "crossterm", not(feature = "termion")))]
+#[cfg(feature = "crossterm")]
 mod _impl {
     use crossterm::{
         execute,
@@ -68,64 +68,4 @@ mod _impl {
         }
     }
 }
-
-#[cfg(feature = "termion")]
-mod _impl {
-    use std::io;
-    pub use termion::terminal_size as size;
-
-    pub struct AlternateRawScreen<T: io::Write> {
-        inner: termion::screen::AlternateScreen<T>,
-    }
-
-    impl<T: io::Write> AlternateRawScreen<termion::raw::RawTerminal<T>> {
-        pub fn try_from(write: T) -> Result<Self, io::Error> {
-            use termion::raw::IntoRawMode;
-            use termion::screen::IntoAlternateScreen;
-            let write = write.into_raw_mode()?;
-            Ok(AlternateRawScreen {
-                inner: write.into_alternate_screen()?,
-            })
-        }
-    }
-
-    impl<T: io::Write> io::Write for AlternateRawScreen<T> {
-        fn write(&mut self, buf: &[u8]) -> io::Result<usize> {
-            self.inner.write(buf)
-        }
-
-        fn flush(&mut self) -> io::Result<()> {
-            self.inner.flush()
-        }
-    }
-
-    #[cfg(all(feature = "tui-termion-backend", not(feature = "tui-react")))]
-    pub mod tui {
-        use tui::backend::TermionBackend;
-
-        pub fn new_terminal<W: std::io::Write>(
-            write: W,
-        ) -> Result<tui::Terminal<TermionBackend<W>>, std::io::Error> {
-            let backend = TermionBackend::new(write);
-            Ok(tui::Terminal::new(backend)?)
-        }
-    }
-
-    /// Utilities for terminal user interface powered by `tui` or `tui-react`.
-    ///
-    /// Requires the `tui-react` and `tui-crossterm-backend` features set.
-    #[cfg(all(feature = "tui-termion-backend", feature = "tui-react"))]
-    pub mod tui {
-        use tui::backend::TermionBackend;
-
-        /// Returns a new Terminal instance with a suitable backend.
-        pub fn new_terminal<W: std::io::Write>(
-            write: W,
-        ) -> Result<tui_react::Terminal<TermionBackend<W>>, std::io::Error> {
-            let backend = TermionBackend::new(write);
-            Ok(tui_react::Terminal::new(backend)?)
-        }
-    }
-}
-
 pub use _impl::*;

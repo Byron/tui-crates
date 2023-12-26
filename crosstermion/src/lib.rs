@@ -1,12 +1,11 @@
 /// Features related to terminal user input
+#[cfg(feature = "crossterm")]
 pub mod input;
 /// Features related to the terminal settings and terminal user interfaces.
-///
-/// Requires `termion` or `crossterm` feature toggles
-#[cfg(any(feature = "termion", feature = "crossterm"))]
+#[cfg(feature = "crossterm")]
 pub mod terminal;
 
-#[cfg(any(feature = "termion", feature = "crossterm"))]
+#[cfg(feature = "crossterm")]
 pub mod cursor;
 
 pub mod color;
@@ -16,8 +15,6 @@ pub mod color;
 pub use ansiterm as ansi_term;
 #[cfg(feature = "crossterm")]
 pub use crossterm;
-#[cfg(feature = "termion")]
-pub use termion;
 #[cfg(feature = "tui")]
 pub use tui;
 #[cfg(feature = "tui-react")]

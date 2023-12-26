@@ -8,12 +8,6 @@ help:  ## Display this help
 check: ## build features in commmon combination to be sure it all stays together
 	#if cargo check; then false; fi
 	$(MAKE) check-windows
-	cargo check --features termion
-	cargo check --features termion,input-async
-	cargo check --features termion,tui
-	cargo check --features tui-react-termion
-	cargo check --features tui-react-termion,input-async
-	cargo check --features tui-termion
 	cargo check --features color
 	cargo check --all-features
 
