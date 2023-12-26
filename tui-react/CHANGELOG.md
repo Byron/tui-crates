@@ -5,7 +5,35 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.22.0 (2023-12-26)
+
+### New Features (BREAKING)
+
+ - <csr-id-7b49dd81a3f7c209279e90c1110de00dfd6a0701/> upgrade to `ratatui` v0.25
+
+### Commit Statistics
+
+<csr-read-only-do-not-edit/>
+
+ - 2 commits contributed to the release.
+ - 19 days passed between releases.
+ - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
+ - 0 issues like '(#ID)' were seen in commit messages
+
+### Commit Details
+
+<csr-read-only-do-not-edit/>
+
+<details><summary>view details</summary>
+
+ * **Uncategorized**
+    - Merge branch 'remove-termion' ([`c69813f`](https://github.com/Byron/tui-crates/commit/c69813f00e114313b206bceaa838e2fe0954f37b))
+    - Upgrade to `ratatui` v0.25 ([`7b49dd8`](https://github.com/Byron/tui-crates/commit/7b49dd81a3f7c209279e90c1110de00dfd6a0701))
+</details>
+
 ## 0.21.0 (2023-12-07)
+
+<csr-id-a371272a96da49e8db82221eaf23d3aab38514d0/>
 
 ### Chore (BREAKING)
 
@@ -16,7 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <csr-read-only-do-not-edit/>
 
- - 2 commits contributed to the release.
+ - 3 commits contributed to the release.
  - 210 days passed between releases.
  - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
@@ -28,6 +56,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - Release tui-react v0.21.0, crosstermion v0.12.0, safety bump crosstermion v0.12.0 ([`942f0b9`](https://github.com/Byron/tui-crates/commit/942f0b97a4b86b91e26530cca914906645f87ac4))
     - Merge branch 'upgrades' ([`c6265c8`](https://github.com/Byron/tui-crates/commit/c6265c8773829f54e4acb1106d56ef2239edcab7))
     - Upgrade `ratatui` to 0.24 and `crossterm` to v0.27. ([`a371272`](https://github.com/Byron/tui-crates/commit/a371272a96da49e8db82221eaf23d3aab38514d0))
 </details>
