@@ -5,6 +5,38 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.13.0 (2023-12-26)
+
+### New Features (BREAKING)
+
+ - <csr-id-7b49dd81a3f7c209279e90c1110de00dfd6a0701/> upgrade to `ratatui` v0.25
+ - <csr-id-2df671a3b4e33e3c960c91e6c10f9e8fe6c94a11/> Remove support for termion; use `crossterm` events directly.
+   Also remove custom Key/Event abstractions and use the ones provided
+   by `crossterm` instead. This is very much a breaking change,
+   but requires only mechanical adjustments.
+
+### Commit Statistics
+
+<csr-read-only-do-not-edit/>
+
+ - 4 commits contributed to the release.
+ - 19 days passed between releases.
+ - 2 commits were understood as [conventional](https://www.conventionalcommits.org).
+ - 0 issues like '(#ID)' were seen in commit messages
+
+### Commit Details
+
+<csr-read-only-do-not-edit/>
+
+<details><summary>view details</summary>
+
+ * **Uncategorized**
+    - Release tui-react v0.22.0, safety bump crosstermion v0.13.0 ([`b7283a5`](https://github.com/Byron/tui-crates/commit/b7283a511abadfdbbb6cfbb2832ee1d84c06815c))
+    - Merge branch 'remove-termion' ([`c69813f`](https://github.com/Byron/tui-crates/commit/c69813f00e114313b206bceaa838e2fe0954f37b))
+    - Upgrade to `ratatui` v0.25 ([`7b49dd8`](https://github.com/Byron/tui-crates/commit/7b49dd81a3f7c209279e90c1110de00dfd6a0701))
+    - Remove support for termion; use `crossterm` events directly. ([`2df671a`](https://github.com/Byron/tui-crates/commit/2df671a3b4e33e3c960c91e6c10f9e8fe6c94a11))
+</details>
+
 ## 0.12.1 (2023-12-07)
 
 ### New Features
@@ -16,7 +48,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <csr-read-only-do-not-edit/>
 
- - 1 commit contributed to the release.
+ - 2 commits contributed to the release.
  - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
 
@@ -27,6 +59,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - Release crosstermion v0.12.1 ([`7e7a324`](https://github.com/Byron/tui-crates/commit/7e7a324e094c121508adb1514b4aa39575f539aa))
     - Replace `ansi-term` with `ansiterm`. ([`5533fe6`](https://github.com/Byron/tui-crates/commit/5533fe6db074b0ba132ea01df41bde45182a4933))
 </details>
 
