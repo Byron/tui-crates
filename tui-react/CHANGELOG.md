@@ -5,6 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.23.0 (2024-02-03)
+
+### Chore
+
+ - <csr-id-ca29ee1037ed9a153c3d346c231e0562ee948467/> update ratatui to 0.26.0
+
+### New Features (BREAKING)
+
+ - <csr-id-943d49d47c04c4ddf36b6ade8652d234d2235961/> update ratatui to 0.26.0
+
+### Commit Statistics
+
+<csr-read-only-do-not-edit/>
+
+ - 2 commits contributed to the release.
+ - 38 days passed between releases.
+ - 2 commits were understood as [conventional](https://www.conventionalcommits.org).
+ - 0 issues like '(#ID)' were seen in commit messages
+
+### Commit Details
+
+<csr-read-only-do-not-edit/>
+
+<details><summary>view details</summary>
+
+ * **Uncategorized**
+    - Update ratatui to 0.26.0 ([`943d49d`](https://github.com/Byron/tui-crates/commit/943d49d47c04c4ddf36b6ade8652d234d2235961))
+    - Update ratatui to 0.26.0 ([`ca29ee1`](https://github.com/Byron/tui-crates/commit/ca29ee1037ed9a153c3d346c231e0562ee948467))
+</details>
+
 ## 0.22.0 (2023-12-26)
 
 ### New Features (BREAKING)
@@ -15,7 +45,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <csr-read-only-do-not-edit/>
 
- - 2 commits contributed to the release.
+ - 3 commits contributed to the release.
  - 19 days passed between releases.
  - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
@@ -27,6 +57,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - Release tui-react v0.22.0, safety bump crosstermion v0.13.0 ([`b7283a5`](https://github.com/Byron/tui-crates/commit/b7283a511abadfdbbb6cfbb2832ee1d84c06815c))
     - Merge branch 'remove-termion' ([`c69813f`](https://github.com/Byron/tui-crates/commit/c69813f00e114313b206bceaa838e2fe0954f37b))
     - Upgrade to `ratatui` v0.25 ([`7b49dd8`](https://github.com/Byron/tui-crates/commit/7b49dd81a3f7c209279e90c1110de00dfd6a0701))
 </details>
