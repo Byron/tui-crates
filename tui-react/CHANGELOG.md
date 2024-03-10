@@ -5,7 +5,34 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.23.1 (2024-03-10)
+
+### Bug Fixes
+
+ - <csr-id-6d5e140a59a9f31d9f0c22885b10c85ff6ce845a/> prevent potential overflow during height computation
+
+### Commit Statistics
+
+<csr-read-only-do-not-edit/>
+
+ - 1 commit contributed to the release.
+ - 35 days passed between releases.
+ - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
+ - 0 issues like '(#ID)' were seen in commit messages
+
+### Commit Details
+
+<csr-read-only-do-not-edit/>
+
+<details><summary>view details</summary>
+
+ * **Uncategorized**
+    - Prevent potential overflow during height computation ([`6d5e140`](https://github.com/Byron/tui-crates/commit/6d5e140a59a9f31d9f0c22885b10c85ff6ce845a))
+</details>
+
 ## 0.23.0 (2024-02-03)
+
+<csr-id-ca29ee1037ed9a153c3d346c231e0562ee948467/>
 
 ### Chore
 
@@ -19,7 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <csr-read-only-do-not-edit/>
 
- - 2 commits contributed to the release.
+ - 3 commits contributed to the release.
  - 38 days passed between releases.
  - 2 commits were understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
@@ -31,6 +58,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - Release tui-react v0.23.0, safety bump crosstermion v0.14.0 ([`c85ae46`](https://github.com/Byron/tui-crates/commit/c85ae466b18d6a97ddb45a7e2dce632d25ef971b))
     - Update ratatui to 0.26.0 ([`943d49d`](https://github.com/Byron/tui-crates/commit/943d49d47c04c4ddf36b6ade8652d234d2235961))
     - Update ratatui to 0.26.0 ([`ca29ee1`](https://github.com/Byron/tui-crates/commit/ca29ee1037ed9a153c3d346c231e0562ee948467))
 </details>
