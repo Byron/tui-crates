@@ -1,20 +1,20 @@
 **tui-react** is a library to enable components with state, and with properties provided per render
 
-Please note that this crate is early in development and build for the needs of **dua**.
+Please note that this crate is early in development and built for the needs of **dua**.
 
 ### How it works
 
 It uses the TUI infrastructure Terminal, but alters it to not enforce implementing the `Widget` trait. 
 It provides only a single, optional, trait called `TopLevelComponent`, which makes it convenient to
-draw its implementors with `Terminal::render(..)`. However, since this enforces the absence of
-refernces in your state, it's probably not suitable for most.
+draw its implementers with `Terminal::render(..)`. However, since this enforces the absence of
+references in your state, it's probably not suitable for most.
 
 Instead, any struct can implement `render` methods or functions, and freely write into the terminal.
 That way, one can leverage everything Rust has to offer, which allows stateful components which
 work in your favor. Thus, this crate does away with 'one size fits all' render implementations,
 greatly adding to flexibility.
 
-State that one wants within the component for instance could be the scoll location. Alternatively,
+State that one wants within the component for instance could be the scroll location. Alternatively,
 one can configure windows by altering their public state.
 
 ### What's the relation to TUI / Ratatui?
