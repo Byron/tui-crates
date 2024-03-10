@@ -5,6 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.23.2 (2024-03-10)
+
+### Bug Fixes
+
+ - <csr-id-71c758121751994f129642ae506a6e0c3aefc59a/> fix the fix which had unexpected side-effect.
+   This now mitigates the overflow while also working correctly.
+
+### Commit Statistics
+
+<csr-read-only-do-not-edit/>
+
+ - 1 commit contributed to the release.
+ - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
+ - 0 issues like '(#ID)' were seen in commit messages
+
+### Commit Details
+
+<csr-read-only-do-not-edit/>
+
+<details><summary>view details</summary>
+
+ * **Uncategorized**
+    - Fix the fix which had unexpected side-effect. ([`71c7581`](https://github.com/Byron/tui-crates/commit/71c758121751994f129642ae506a6e0c3aefc59a))
+</details>
+
 ## 0.23.1 (2024-03-10)
 
 ### Bug Fixes
@@ -15,7 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <csr-read-only-do-not-edit/>
 
- - 1 commit contributed to the release.
+ - 2 commits contributed to the release.
  - 35 days passed between releases.
  - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
@@ -27,6 +52,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - Release tui-react v0.23.1 ([`57f7b9e`](https://github.com/Byron/tui-crates/commit/57f7b9e44ae94efceb198a7dc0487fc042d20036))
     - Prevent potential overflow during height computation ([`6d5e140`](https://github.com/Byron/tui-crates/commit/6d5e140a59a9f31d9f0c22885b10c85ff6ce845a))
 </details>
 
