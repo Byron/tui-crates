@@ -47,10 +47,9 @@ pub fn input_channel() -> std::sync::mpsc::Receiver<Event> {
                 Action::Continue => continue,
                 Action::Result(res) => res?,
             };
-            if let Ok(event) = event.try_into() {
-                if key_send.send(event).is_err() {
-                    break;
-                }
+            let Ok(event) = event.try_into();
+            if key_send.send(event).is_err() {
+                break;
             }
         }
         Ok(())

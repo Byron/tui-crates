@@ -1,9 +1,9 @@
 use std::borrow::Cow;
 use std::ffi::OsStr;
 
-#[cfg(feature = "ansiterm")]
+#[cfg(feature = "nu-ansi-term")]
 mod _impl {
-    use ansiterm::{ANSIGenericString, Style};
+    use nu_ansi_term::{AnsiGenericString, Style};
 
     pub struct Brush {
         may_paint: bool,
@@ -27,20 +27,20 @@ mod _impl {
         pub fn paint<'a, I, S: 'a + ToOwned + ?Sized>(
             &mut self,
             input: I,
-        ) -> ANSIGenericString<'a, S>
+        ) -> AnsiGenericString<'a, S>
         where
             I: Into<std::borrow::Cow<'a, S>>,
             <S as ToOwned>::Owned: std::fmt::Debug,
         {
             match (self.may_paint, self.style.as_ref().take()) {
                 (true, Some(style)) => style.paint(input),
-                (_, Some(_)) | (_, None) => ANSIGenericString::from(input),
+                (_, Some(_)) | (_, None) => AnsiGenericString::from(input),
             }
         }
     }
 }
 
-#[cfg(feature = "ansiterm")]
+#[cfg(feature = "nu-ansi-term")]
 pub use _impl::*;
 
 /// Return true if we should colorize the output, based on [clicolors spec](https://bixense.com/clicolors/) and [no-color spec](https://no-color.org)
