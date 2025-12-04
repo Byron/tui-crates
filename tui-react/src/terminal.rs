@@ -138,6 +138,7 @@ mod tests {
     use super::*;
     use tui::backend::TestBackend;
 
+    #[expect(dead_code)]
     #[derive(Default, Clone)]
     struct ComplexProps {
         x: usize,
@@ -175,7 +176,7 @@ mod tests {
         term.render(&mut c, 3usize).ok();
         assert_eq!(c.x, 3);
 
-        let mut c = StatelessComponent::default();
+        let mut c = StatelessComponent;
         term.render(&mut c, ComplexProps::default()).ok();
     }
 }

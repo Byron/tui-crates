@@ -11,10 +11,10 @@ pub mod cursor;
 pub mod color;
 
 // Reexports
-#[cfg(feature = "nu-ansi-term")]
-pub use nu_ansi_term;
 #[cfg(feature = "crossterm")]
 pub use crossterm;
+#[cfg(feature = "nu-ansi-term")]
+pub use nu_ansi_term;
 #[cfg(feature = "tui")]
 pub use tui;
 #[cfg(feature = "tui-react")]
