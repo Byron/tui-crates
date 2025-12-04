@@ -5,6 +5,36 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.23.3 (2025-12-04)
+
+### Commit Statistics
+
+<csr-read-only-do-not-edit/>
+
+ - 4 commits contributed to the release.
+ - 634 days passed between releases.
+ - 0 commits were understood as [conventional](https://www.conventionalcommits.org).
+ - 0 issues like '(#ID)' were seen in commit messages
+
+### Thanks Clippy
+
+<csr-read-only-do-not-edit/>
+
+[Clippy](https://github.com/rust-lang/rust-clippy) helped 1 time to make code idiomatic. 
+
+### Commit Details
+
+<csr-read-only-do-not-edit/>
+
+<details><summary>view details</summary>
+
+ * **Uncategorized**
+    - Merge pull request #10 from jbicha/nu-ansi-term ([`8ca3331`](https://github.com/Byron/tui-crates/commit/8ca333126a977b72d1a2bef3eabd6950eba7d4a4))
+    - Thanks clippy ([`aae463b`](https://github.com/Byron/tui-crates/commit/aae463b329e793e3583b886aacb02b2dce3609cc))
+    - Merge pull request #8 from 20jasper/patch-1 ([`7df0aa5`](https://github.com/Byron/tui-crates/commit/7df0aa5ff53d49ade3b407ff51d2106d5d269733))
+    - Fix typos in README ([`defe88a`](https://github.com/Byron/tui-crates/commit/defe88abd1c0521e30e60daa102a10701257d6e9))
+</details>
+
 ## 0.23.2 (2024-03-10)
 
 ### Bug Fixes
@@ -16,7 +46,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <csr-read-only-do-not-edit/>
 
- - 1 commit contributed to the release.
+ - 2 commits contributed to the release.
  - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
 
@@ -27,6 +57,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - Release tui-react v0.23.2 ([`08154f9`](https://github.com/Byron/tui-crates/commit/08154f997d957236dc5ab156f6e25e1276377f09))
     - Fix the fix which had unexpected side-effect. ([`71c7581`](https://github.com/Byron/tui-crates/commit/71c758121751994f129642ae506a6e0c3aefc59a))
 </details>
 
@@ -130,7 +161,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <csr-read-only-do-not-edit/>
 
  - 3 commits contributed to the release.
- - 210 days passed between releases.
  - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
 
@@ -161,7 +191,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <csr-read-only-do-not-edit/>
 
  - 4 commits contributed to the release.
- - 241 days passed between releases.
  - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
 
