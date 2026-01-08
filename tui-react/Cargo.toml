@@ -12,4 +12,4 @@ license = "MIT"
 tui = { package = "ratatui", version = "0.26.0", default-features = false }
 log = "0.4.6"
 unicode-segmentation = "1.6.0"
-unicode-width = "0.1.7"
+unicode-width = "0.2.2"
