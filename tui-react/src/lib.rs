@@ -24,7 +24,7 @@ pub fn fill_background_to_right(mut s: String, entire_width: u16) -> String {
 pub fn fill_background(area: Rect, buf: &mut Buffer, color: Color) {
     for y in area.top()..area.bottom() {
         for x in area.left()..area.right() {
-            buf.get_mut(x, y).set_bg(color);
+            buf[(x, y)].set_bg(color);
         }
     }
 }
@@ -47,7 +47,7 @@ pub fn draw_text_with_ellipsis_nowrap(
             total_width += width;
 
             x += x_offset;
-            let cell = buf.get_mut(x, bound.y);
+            let cell = &mut buf[(x, bound.y)];
             if x + 1 == bound.right() {
                 ellipsis_candidate_x = Some(x);
             }
@@ -67,7 +67,7 @@ pub fn draw_text_with_ellipsis_nowrap(
             }
         }
         if let (Some(_), Some(x)) = (graphemes.next(), ellipsis_candidate_x) {
-            buf.get_mut(x, bound.y).set_symbol("…");
+            buf[(x, bound.y)].set_symbol("…");
         }
     }
     total_width as u16
@@ -83,7 +83,7 @@ pub fn draw_text_nowrap_fn(
         return;
     }
     for (g, x) in t.as_ref().graphemes(true).zip(bound.left()..bound.right()) {
-        let cell = buf.get_mut(x, bound.y);
+        let cell = &mut buf[(x, bound.y)];
         cell.set_symbol(g);
         cell.set_style(s(cell.symbol(), x, bound.y));
     }
