@@ -5,7 +5,79 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.16.0 (2026-01-08)
+
+### Chore (BREAKING)
+
+ - <csr-id-829ba817adb5c178ea42eb6ca4bf670c67f5b5fa/> upgrade ratatui to 0.30 and crossterm to 0.29
+
+### Commit Statistics
+
+<csr-read-only-do-not-edit/>
+
+ - 3 commits contributed to the release.
+ - 34 days passed between releases.
+ - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
+ - 0 issues like '(#ID)' were seen in commit messages
+
+### Thanks Clippy
+
+<csr-read-only-do-not-edit/>
+
+[Clippy](https://github.com/rust-lang/rust-clippy) helped 1 time to make code idiomatic. 
+
+### Commit Details
+
+<csr-read-only-do-not-edit/>
+
+<details><summary>view details</summary>
+
+ * **Uncategorized**
+    - Merge pull request #11 from Byron/updates ([`4376d1a`](https://github.com/Byron/tui-crates/commit/4376d1acb1d50f46067f545630e84fc92fabc9ed))
+    - Upgrade ratatui to 0.30 and crossterm to 0.29 ([`829ba81`](https://github.com/Byron/tui-crates/commit/829ba817adb5c178ea42eb6ca4bf670c67f5b5fa))
+    - Thanks clippy ([`8857b63`](https://github.com/Byron/tui-crates/commit/8857b63f2ca34b47a2cd351c9c4a39d5e59195b3))
+</details>
+
+## 0.15.0 (2025-12-04)
+
+### New Features (BREAKING)
+
+ - <csr-id-02acee63cdb947e56179ae7d68a6b2e63424fcca/> replace `ansiterm` with `nu-ansi-term`
+   nu-ansi-term is more popular and maintained
+
+### Commit Statistics
+
+<csr-read-only-do-not-edit/>
+
+ - 6 commits contributed to the release over the course of 634 calendar days.
+ - 670 days passed between releases.
+ - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
+ - 0 issues like '(#ID)' were seen in commit messages
+
+### Thanks Clippy
+
+<csr-read-only-do-not-edit/>
+
+[Clippy](https://github.com/rust-lang/rust-clippy) helped 1 time to make code idiomatic. 
+
+### Commit Details
+
+<csr-read-only-do-not-edit/>
+
+<details><summary>view details</summary>
+
+ * **Uncategorized**
+    - Release tui-react v0.23.3, crosstermion v0.15.0 ([`34809db`](https://github.com/Byron/tui-crates/commit/34809dbc0fd825b0ca5416615f4418c6ae604300))
+    - Merge pull request #10 from jbicha/nu-ansi-term ([`8ca3331`](https://github.com/Byron/tui-crates/commit/8ca333126a977b72d1a2bef3eabd6950eba7d4a4))
+    - Thanks clippy ([`aae463b`](https://github.com/Byron/tui-crates/commit/aae463b329e793e3583b886aacb02b2dce3609cc))
+    - Replace `ansiterm` with `nu-ansi-term` ([`02acee6`](https://github.com/Byron/tui-crates/commit/02acee63cdb947e56179ae7d68a6b2e63424fcca))
+    - Release tui-react v0.23.2 ([`08154f9`](https://github.com/Byron/tui-crates/commit/08154f997d957236dc5ab156f6e25e1276377f09))
+    - Release tui-react v0.23.1 ([`57f7b9e`](https://github.com/Byron/tui-crates/commit/57f7b9e44ae94efceb198a7dc0487fc042d20036))
+</details>
+
 ## 0.14.0 (2024-02-03)
+
+<csr-id-ca29ee1037ed9a153c3d346c231e0562ee948467/>
 
 ### Chore
 
@@ -19,7 +91,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <csr-read-only-do-not-edit/>
 
- - 3 commits contributed to the release.
+ - 4 commits contributed to the release.
  - 38 days passed between releases.
  - 2 commits were understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
@@ -31,6 +103,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - Release crosstermion v0.14.0 ([`3a96651`](https://github.com/Byron/tui-crates/commit/3a96651033a3e8436e3836479420a3be65c1800a))
     - Release tui-react v0.23.0, safety bump crosstermion v0.14.0 ([`c85ae46`](https://github.com/Byron/tui-crates/commit/c85ae466b18d6a97ddb45a7e2dce632d25ef971b))
     - Update ratatui to 0.26.0 ([`943d49d`](https://github.com/Byron/tui-crates/commit/943d49d47c04c4ddf36b6ade8652d234d2235961))
     - Update ratatui to 0.26.0 ([`ca29ee1`](https://github.com/Byron/tui-crates/commit/ca29ee1037ed9a153c3d346c231e0562ee948467))
@@ -114,7 +187,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <csr-read-only-do-not-edit/>
 
  - 4 commits contributed to the release.
- - 210 days passed between releases.
  - 2 commits were understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
 
@@ -146,7 +218,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <csr-read-only-do-not-edit/>
 
  - 4 commits contributed to the release.
- - 241 days passed between releases.
  - 1 commit was understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
 

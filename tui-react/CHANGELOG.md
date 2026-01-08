@@ -5,13 +5,44 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 0.24.0 (2026-01-08)
+
+### Chore
+
+ - <csr-id-f63f3e0c1aca57345c23e2c9fa63be273c938744/> updates dependencies
+
+### Chore (BREAKING)
+
+ - <csr-id-829ba817adb5c178ea42eb6ca4bf670c67f5b5fa/> upgrade ratatui to 0.30 and crossterm to 0.29
+
+### Commit Statistics
+
+<csr-read-only-do-not-edit/>
+
+ - 3 commits contributed to the release.
+ - 34 days passed between releases.
+ - 2 commits were understood as [conventional](https://www.conventionalcommits.org).
+ - 0 issues like '(#ID)' were seen in commit messages
+
+### Commit Details
+
+<csr-read-only-do-not-edit/>
+
+<details><summary>view details</summary>
+
+ * **Uncategorized**
+    - Merge pull request #11 from Byron/updates ([`4376d1a`](https://github.com/Byron/tui-crates/commit/4376d1acb1d50f46067f545630e84fc92fabc9ed))
+    - Upgrade ratatui to 0.30 and crossterm to 0.29 ([`829ba81`](https://github.com/Byron/tui-crates/commit/829ba817adb5c178ea42eb6ca4bf670c67f5b5fa))
+    - Updates dependencies ([`f63f3e0`](https://github.com/Byron/tui-crates/commit/f63f3e0c1aca57345c23e2c9fa63be273c938744))
+</details>
+
 ## 0.23.3 (2025-12-04)
 
 ### Commit Statistics
 
 <csr-read-only-do-not-edit/>
 
- - 4 commits contributed to the release.
+ - 5 commits contributed to the release.
  - 634 days passed between releases.
  - 0 commits were understood as [conventional](https://www.conventionalcommits.org).
  - 0 issues like '(#ID)' were seen in commit messages
@@ -29,6 +60,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 <details><summary>view details</summary>
 
  * **Uncategorized**
+    - Release tui-react v0.23.3, crosstermion v0.15.0 ([`34809db`](https://github.com/Byron/tui-crates/commit/34809dbc0fd825b0ca5416615f4418c6ae604300))
     - Merge pull request #10 from jbicha/nu-ansi-term ([`8ca3331`](https://github.com/Byron/tui-crates/commit/8ca333126a977b72d1a2bef3eabd6950eba7d4a4))
     - Thanks clippy ([`aae463b`](https://github.com/Byron/tui-crates/commit/aae463b329e793e3583b886aacb02b2dce3609cc))
     - Merge pull request #8 from 20jasper/patch-1 ([`7df0aa5`](https://github.com/Byron/tui-crates/commit/7df0aa5ff53d49ade3b407ff51d2106d5d269733))
