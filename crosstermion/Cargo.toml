@@ -14,7 +14,7 @@ default = []
 
 color = ["nu-ansi-term"]
 
-input-async = ["futures-channel", "async-channel", "futures-lite", "futures-core" ]
+input-async = ["futures-channel", "async-channel", "futures-lite", "futures-core"]
 input-async-crossterm = ["crossterm/event-stream", "input-async"]
 
 tui-crossterm = ["tui", "tui-crossterm-backend", "crossterm"]

@@ -64,7 +64,7 @@ mod _impl {
             write: W,
         ) -> Result<tui_react::Terminal<CrosstermBackend<W>>, std::io::Error> {
             let backend = CrosstermBackend::new(write);
-            Ok(tui_react::Terminal::new(backend)?)
+            tui_react::Terminal::new(backend)
         }
     }
 }
