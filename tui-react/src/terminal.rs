@@ -48,7 +48,7 @@ where
     where
         io::Error: From<B::Error>,
     {
-        let size: Rect = backend.size().map_err(|e| io::Error::from(e))?.into();
+        let size = backend.size().map_err(|e| io::Error::from(e))?.into();
         Ok(Terminal {
             backend,
             buffers: [Buffer::empty(size), Buffer::empty(size)],
@@ -148,7 +148,8 @@ where
     where
         io::Error: From<B::Error>,
     {
-        self.backend.get_cursor_position().map_err(|e| io::Error::from(e)).map(|pos| (pos.x, pos.y))
+        let pos = self.backend.get_cursor_position().map_err(|e| io::Error::from(e))?;
+        Ok((pos.x, pos.y))
     }
     pub fn set_cursor(&mut self, x: u16, y: u16) -> io::Result<()>
     where
