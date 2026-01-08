@@ -38,8 +38,6 @@ pub fn key_input_channel() -> std::sync::mpsc::Receiver<Key> {
 
 /// Return a receiver of user input events to avoid blocking the main thread.
 pub fn input_channel() -> std::sync::mpsc::Receiver<Event> {
-    use std::convert::TryInto;
-
     let (key_send, key_receive) = std::sync::mpsc::sync_channel(0);
     std::thread::spawn(move || -> Result<(), std::io::Error> {
         loop {
@@ -47,7 +45,6 @@ pub fn input_channel() -> std::sync::mpsc::Receiver<Event> {
                 Action::Continue => continue,
                 Action::Result(res) => res?,
             };
-            let Ok(event) = event.try_into();
             if key_send.send(event).is_err() {
                 break;
             }
